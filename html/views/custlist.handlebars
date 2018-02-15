@@ -1,0 +1,43 @@
+<section id="titlebar"><h2>Customer List</h2></section>
+<section id="content">
+<section>
+<div class="report-row clearfix">
+<div id="list">
+
+<a href="/addcust">Add New Customer</a>
+<table class="agents tio-table__table" data-key="/scanners/104841/agents" data-modal="false">
+        <thead>
+            <tr>
+                <th class="w300" data-sortname="name">Customer Name</th>
+                <th class="w50"></th>
+                <th class="w50"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+{{#each customers}}
+<tr class="agent " data-name="{{name}}" data-id="{{accesskey}}">
+                    <td class="agent-name pr10 pointer">{{name}}</td>
+                    <td class="add-tip" title="Edit"><form method="POST" action="/editcust">
+<input type="hidden" name="_csrf" value="{{csrf}}">
+<input type="hidden" name="custname" value="{{name}}">
+<button type="submit">Edit</button>
+</form>
+</td>
+
+                    <td class="add-tip" title="Delete">
+<form method="POST" action="/delcust">
+<input type="hidden" name="_csrf" value="{{csrf}}">
+<input type="hidden" name="custname" value="{{name}}">
+<input type="hidden" name="custid" value="{{accesskey}}">
+<button type="submit">Delete</button>
+</div>
+</form>
+</td>
+                </tr>
+
+{{/each}}
+</div>
+</div>
+</section>
+</section>

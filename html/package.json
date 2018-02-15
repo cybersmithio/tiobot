@@ -1,0 +1,15 @@
+{
+  "name": "tiobot",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tenable.io Bot (Workflow Automation)",
+  "dependencies": {
+    "request": "*",
+    "express-handlebars": "*",
+    "body-parser": "*",
+    "mongoose": "*",
+    "q": "*",
+    "express": "*"
+  }
+}
+

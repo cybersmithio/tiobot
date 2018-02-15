@@ -1,0 +1,54 @@
+<section id="titlebar"><h2>Edit Customer</h2></section>
+<section id="content">
+<section>
+
+<div id="list">
+{{#each customers}}
+<form method="POST" action="/updatecust">
+<input type="hidden" name="_csrf" value="{{csrf}}">
+<input type="hidden" name="name" value="{{name}}">
+
+<div class="report-row clearfix">
+<label>Name</label>
+<label>{{name}}</label>
+</div>
+
+<div class="report-row clearfix">
+<label>Tenable.io API Access Key</label>
+<input type="text" name="accesskey" value="{{accesskey}}">
+</div>
+
+<div class="report-row clearfix">
+<label>Tenable.io API Secret Key</label>
+<input type="text" name="secretkey" value="{{secretkey}}">
+</div>
+
+<div class="report-row clearfix">
+<label>CVSS Alert Threshold</label>
+<input type="text" name="cvssalertthreshold" value="{{cvssalertthreshold}}">
+</div>
+
+
+
+<div class="report-row clearfix">
+<label>Alert email</label>
+<input type="text" name="alertemail" value="{{alertemail}}">
+</div>
+
+<div class="report-row clearfix">
+<label>Syslog server</label>
+<input type="text" name="syslogserver" value="{{syslogserver}}">
+</div>
+
+
+
+
+<div>
+<button type="submit">Submit</button>
+</div>
+</form>
+{{/each}}
+</div>
+</section>
+</section>
+

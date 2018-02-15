@@ -1,0 +1,41 @@
+<section id="titlebar"><h2>Add Customer</h2></section>
+<section id="content">
+<section>
+<form method="POST" action="/addcust">
+<input type="hidden" name="_csrf" value="{{csrf}}">
+<div class="report-row clearfix">
+<label>Customer Name</label>
+<input type="text" name="custname">
+</div>
+<div class="report-row clearfix">
+<label>Tenable.io API Access Key</label>
+<input type="text" name="accesskey">
+</div>
+
+<div class="report-row clearfix">
+<label>Tenable.io API Secret Key</label>
+<input type="password" name="secretkey">
+</div>
+
+<div class="report-row clearfix">
+<label>CVSS Alert Threshold</label>
+<input type="text" name="cvssalertthreshold">
+</div>
+
+<div class="report-row clearfix">
+<label>Alert email</label>
+<input type="text" name="alertemail">
+</div>
+
+<div class="report-row clearfix">
+<label>Syslog server</label>
+<input type="text" name="syslogserver">
+</div>
+
+
+<div class="report-row clearfix">
+<button type="submit">Submit</button>
+</div>
+</form>
+</section>
+</section>

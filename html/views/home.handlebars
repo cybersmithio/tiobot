@@ -1,0 +1,52 @@
+<section id="titlebar"><h2>Tenable.io Bot Home</h2></section>
+<section id="content">
+<section>
+<div class="report-row clearfix">
+<div id="dashboard">
+<div id="grid">
+
+
+<div class="grid__cell grid__cell--50" data-component="0">
+            <div class="dashboard__component">
+                <div class="dashboard__header">
+                    <span data-domselect="dashboard__header-label" original-title="Customers">Customers</span>
+                    <span data-domselect="dashboard__header-refresh" class="glyphicons reload pull--right add-tip dashboard__header-refresh" style="display: none;" title="Refresh" data-widget="matrix" data-allow-show="false"></span>
+                </div>    <div class="dashboard__body-wrapper">
+                    <div class="dashboard__body" data-domselect="dashboard__body"><div class="chart-matrix">
+    <div class="chart-matrix__wrapper">
+        <table class="chart-matrix__table">
+            <tbody>
+                <tr class="chart-matrix__row">
+
+
+{{#each customers}}
+                        <td class="chart-matrix__cell dashboard__selectable" data-cell-index="0">
+                            <div class="chart-matrix__cell-wrapper">
+                                <div class="chart-matrix__color-block" style="background-color: #9a5bc2; color: #ffffff; ">
+    <div class="chart-matrix__color-label">{{name}}
+    </div>
+</div>
+                            </div>
+                        </td>
+
+{{/each}}
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+                
+                    <div class="dashboard__loader" data-domselect="dashboard__loader" style="display: none;">
+                        <div class="dashboard__loader-spinner"></div>
+                        <div class="dashboard__loader-text">Loading...please wait.</div>
+                    </div>
+                </div>
+            </div>        </div>
+
+</div>
+</div>
+</div>
+</section>
+</section>
