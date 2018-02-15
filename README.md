@@ -1,9 +1,10 @@
-tiobot is a web interface to a workflow automation based on vulnerability data downloaded from Tenable.io.
+# tiobot
+This is a web interface to a workflow automation based on vulnerability data downloaded from Tenable.io.
 It requires a Mongo DB to access the data from Tenable.io.  The database is populated by the tiovulndlr microservice.
-See tiovulndlr for how to setup the Mongo DB.
+See https://github.com/cybersmithio/tiovulndlr for how to setup the Mongo DB.
 
 # To Build
-To build tiobot: docker build ./ -t tiobot
+To build tiobot: **docker build ./ -t tiobot**
 
 # To Run
 To run tiobot: 
